@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f3f5fa;
+  --color-navy-100: #e4e9f3;
+  --color-navy-200: #c8d1e3;
+  --color-navy-300: #9aa8c4;
+  --color-navy-400: #7080a2;
+  --color-navy-500: #4a5b80;
+  --color-navy-600: #34456b;
+  --color-navy-700: #26365a;
+  --color-navy-800: #1b2747;
+  --color-navy-900: #121a33;
+  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+}
+
+html, body { background: var(--color-slate-100); color: var(--color-navy-900); }
+body { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+input[type="range"] { accent-color: var(--color-blue-600); }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* ---- ユーザビリティ ---- */
+/* ダブルタップでの拡大を防ぎ、タップの反応を速くする */
+button, a, input, label { touch-action: manipulation; }
+/* キーボード操作時だけ、今どこを選んでいるかを明確に表示（PC向け） */
+:focus-visible { outline: 3px solid var(--color-blue-600); outline-offset: 2px; border-radius: 8px; }
+:focus:not(:focus-visible) { outline: none; }
+/* 動きを減らす設定の人にはアニメーションを止める */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

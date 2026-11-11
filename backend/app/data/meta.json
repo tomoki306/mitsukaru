@@ -1,0 +1,195 @@
+{
+  "_note": "診断・条件・業界平均などのマスターデータ（業界平均はサンプル値）",
+  "axes": [
+    {
+      "key": "stability",
+      "label": "安定志向",
+      "env": "腰を据えて長く働ける環境",
+      "gapAdvice": "雇用や収益の安定性を説明会などで確かめておくとよい"
+    },
+    {
+      "key": "challenge",
+      "label": "挑戦志向",
+      "env": "早くから新しいことに挑戦できる環境",
+      "gapAdvice": "若手が新しい仕事を任される機会がどれくらいあるか確かめておくとよい"
+    },
+    {
+      "key": "expertise",
+      "label": "専門性",
+      "env": "専門スキルを深く磨ける環境",
+      "gapAdvice": "専門スキルを伸ばす研修や配属の仕組みを確かめておくとよい"
+    },
+    {
+      "key": "teamwork",
+      "label": "協調性",
+      "env": "チームで協力して進める環境",
+      "gapAdvice": "チームでの進め方や周囲との関わり方を確かめておくとよい"
+    },
+    {
+      "key": "results",
+      "label": "成果志向",
+      "env": "成果が数字で見える環境",
+      "gapAdvice": "評価の仕組みや成果の見え方を確かめておくとよい"
+    },
+    {
+      "key": "freedom",
+      "label": "自由度",
+      "env": "時間や場所を柔軟に選べる環境",
+      "gapAdvice": "働く時間や場所の柔軟さを説明会などで確かめておくとよい"
+    }
+  ],
+  "questions": [
+    {
+      "text": "安定した環境で長く働きたい",
+      "weights": {
+        "stability": 1.0,
+        "challenge": -0.2
+      }
+    },
+    {
+      "text": "若いうちから新しいことに挑戦したい",
+      "weights": {
+        "challenge": 1.0,
+        "stability": -0.2
+      }
+    },
+    {
+      "text": "専門スキルを深く磨きたい",
+      "weights": {
+        "expertise": 1.0
+      }
+    },
+    {
+      "text": "チームで協力して進める仕事が好き",
+      "weights": {
+        "teamwork": 1.0
+      }
+    },
+    {
+      "text": "成果が数字で見える仕事がしたい",
+      "weights": {
+        "results": 1.0,
+        "challenge": 0.2
+      }
+    },
+    {
+      "text": "働く時間や場所の自由度を重視する",
+      "weights": {
+        "freedom": 1.0
+      }
+    },
+    {
+      "text": "知名度のある会社で働きたい",
+      "weights": {
+        "stability": 0.5,
+        "results": 0.2
+      }
+    },
+    {
+      "text": "社会への影響が大きい仕事がしたい",
+      "weights": {
+        "challenge": 0.4,
+        "teamwork": 0.3,
+        "expertise": 0.2
+      }
+    }
+  ],
+  "scale": [
+    "まったく当てはまらない",
+    "あまり当てはまらない",
+    "どちらともいえない",
+    "やや当てはまる",
+    "とても当てはまる"
+  ],
+  "industries": [
+    "IT・ソフトウェア",
+    "ゲーム",
+    "3DCG・映像",
+    "広告・メディア",
+    "メーカー"
+  ],
+  "industryPrefs": [
+    "IT・ソフトウェア",
+    "ゲーム",
+    "3DCG・映像",
+    "広告・メディア"
+  ],
+  "regions": [
+    "首都圏",
+    "関西",
+    "東海",
+    "九州",
+    "その他の地域"
+  ],
+  "conditions": [
+    {
+      "key": "salary",
+      "label": "給与"
+    },
+    {
+      "key": "holidays",
+      "label": "休日"
+    },
+    {
+      "key": "location",
+      "label": "勤務地"
+    },
+    {
+      "key": "remote",
+      "label": "リモート可"
+    },
+    {
+      "key": "training",
+      "label": "研修制度"
+    }
+  ],
+  "salaryOptions": [
+    450,
+    500,
+    550,
+    600
+  ],
+  "holidayOptions": [
+    120,
+    125,
+    130
+  ],
+  "benchmarks": {
+    "IT・ソフトウェア": {
+      "opMargin": 9.0,
+      "equityRatio": 50,
+      "avgSalary": 580,
+      "revenueGrowth": 7.0,
+      "holidays": 123
+    },
+    "ゲーム": {
+      "opMargin": 14.0,
+      "equityRatio": 60,
+      "avgSalary": 600,
+      "revenueGrowth": 6.0,
+      "holidays": 122
+    },
+    "3DCG・映像": {
+      "opMargin": 6.0,
+      "equityRatio": 45,
+      "avgSalary": 460,
+      "revenueGrowth": 5.0,
+      "holidays": 119
+    },
+    "広告・メディア": {
+      "opMargin": 6.5,
+      "equityRatio": 40,
+      "avgSalary": 560,
+      "revenueGrowth": 4.0,
+      "holidays": 121
+    },
+    "メーカー": {
+      "opMargin": 8.0,
+      "equityRatio": 55,
+      "avgSalary": 590,
+      "revenueGrowth": 3.0,
+      "holidays": 122
+    }
+  },
+  "benchmarkSource": "業界統計（サンプル値）"
+}
